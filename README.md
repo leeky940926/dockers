@@ -37,9 +37,10 @@
 
 ## 7. Commit Message GuideLines
 
-1. 분류는 Add / Refactor / Docs로 나뉜다.
+1. 분류는 Add / Refactor / Docs / Settings로 나뉜다.
 2. ADD : 신규로 기능 구현할 때 사용
 3. Refactor : 코드 리팩토링 (신규 외 수정/삭제 등에 대한 모든 기능에 사용)
 4. Docs : 문서에 관련된 수정작업(README 등)
+5. Settings : 세팅관련해서 사용
 
 <br>
