@@ -16,7 +16,7 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-#sys.path.append(os.path.normpath(os.path.join(BASE_DIR, 'apps')))
+sys.path.append(os.path.normpath(os.path.join(BASE_DIR, 'apps')))
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,7 +31,7 @@ DEBUG = False
 ALLOWED_HOSTS = []
 
 
-ROOT_URLCONF = 'dockers.urls'
+ROOT_URLCONF = 'dockers.urls.root'
 
 TEMPLATES = [
     {
