@@ -28,3 +28,21 @@
 ## 5. API Documentation
 
 * swagger
+
+<br>
+
+## 6. Git Flow
+
+<br>
+
+## 7. Commit Message GuideLines
+
+1. 분류는 Add / Remove / Modify / Fix / Refactor / Docs로 나뉜다.
+2. ADD : 기능 추가할 시 기입
+3. Remove : 폴더/파일 삭제할 시 기입
+4. Modify : 수정 (JSON 데이터 포맷 등 코드가 아닌 사항을 변경할 시 기입)
+5. Fix : 버그/오류 해결할 시 기입
+6. Refactor : 코드 리팩토링 (ORM구문 변경, 불필요 코드 제거, 성능 개선 등 코드 관련된 내용 수정할 시 기입)
+7. Docs : 문서에 관련된 수정작업(README 등)
+
+<br>
