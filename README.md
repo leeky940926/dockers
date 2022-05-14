@@ -37,10 +37,9 @@
 
 ## 7. Commit Message GuideLines
 
-1. 분류는 Add / Fix / Refactor / Docs로 나뉜다.
-2. ADD : 기능 추가할 시 기입
-3. Fix : 버그/오류 해결할 시 기입
-4. Refactor : 코드 리팩토링 (ORM구문 변경, 불필요 코드 제거, 성능 개선 등 코드 관련된 내용 수정할 시 기입)
-5. Docs : 문서에 관련된 수정작업(README 등)
+1. 분류는 Add / Refactor / Docs로 나뉜다.
+2. ADD : 신규로 기능 구현할 때 사용
+3. Refactor : 코드 리팩토링 (신규 외 수정/삭제 등에 대한 모든 기능에 사용)
+4. Docs : 문서에 관련된 수정작업(README 등)
 
 <br>
