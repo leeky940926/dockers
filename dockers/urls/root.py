@@ -17,4 +17,5 @@ from django.urls import path, include
 
 urlpatterns = [
    path('api/', include('dockers.urls.api_v1')),
+   path('admin/', include('dockers.urls.admin')),
 ]
