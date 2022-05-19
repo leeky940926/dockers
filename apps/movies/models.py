@@ -1,3 +1,3 @@
 from django.db import models
+from utilities.models import TimeStampModel
 
-# Create your models here.
