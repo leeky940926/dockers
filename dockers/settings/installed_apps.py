@@ -1,10 +1,11 @@
 CUSTOMIEZED_APPS = [
-
+    'movies'
 ]
 
 THIRD_PARTY_APPS = [
     'django_extensions',
-    'corsheaders'
+    'corsheaders',
+    'rest_framework'
 ]
 
 INSTALLED_APPS = [
