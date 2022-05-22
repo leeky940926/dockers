@@ -5,7 +5,8 @@ CUSTOMIEZED_APPS = [
 THIRD_PARTY_APPS = [
     'django_extensions',
     'corsheaders',
-    'rest_framework'
+    'rest_framework',
+    'rest_framework_swagger'
 ]
 
 INSTALLED_APPS = [
