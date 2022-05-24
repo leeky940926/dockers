@@ -1,5 +1,6 @@
 CUSTOMIEZED_APPS = [
-    'movies'
+    'movies',
+    'drf_yasg'
 ]
 
 THIRD_PARTY_APPS = [
