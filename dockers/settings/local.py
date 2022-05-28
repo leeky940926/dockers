@@ -7,13 +7,3 @@ DEBUG=True
 
 ALLOWED_HOSTS = ['*']
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'USER': 'mydatabaseuser',
-        'NAME': 'mydatabase',
-        'TEST': {
-            'NAME': 'mytestdatabase',
-        },
-    },
-}
