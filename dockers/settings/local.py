@@ -6,3 +6,4 @@ from .logging import *
 DEBUG=True
 
 ALLOWED_HOSTS = ['*']
+
