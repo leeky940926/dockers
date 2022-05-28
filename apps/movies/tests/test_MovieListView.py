@@ -56,8 +56,12 @@ class TestMovieListView(APITestCase):
             title = "reply3",
             content = "그저그래여",
             rating = 5
+<<<<<<< HEAD
         )
         self.databases 
+=======
+        ) 
+>>>>>>> master
         
     def tearDown(self) :
         Reply.objects.all().delete()
@@ -129,6 +133,7 @@ class TestMovieListView(APITestCase):
                 }
             ]
         )
+<<<<<<< HEAD
 
 
 class TestMovieDetailView(APITestCase):
@@ -215,3 +220,5 @@ class TestMovieDetailView(APITestCase):
                     ]
                 }
         )
+=======
+>>>>>>> master
