@@ -68,7 +68,7 @@ Unit Test 코드는 [해당 디렉토리](https://github.com/leeky940926/dockers
 
 ## 5. API Documentation
 
-* swagger
+* 배포되면 swagger링크 쓰기
 
 <br>
 
