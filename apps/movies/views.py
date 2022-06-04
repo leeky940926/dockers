@@ -1,11 +1,14 @@
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-
+from drf_yasg.utils import swagger_auto_schema
 from apps.movies.get_movies import get_movie_object_by_movie_id, get_movie_set_by_page
 from apps.movies.serializers import movie_set_serializer
+from dockers.urls.docs import response_schema_dict
+
 
 class MovieListView(APIView):
+    @swagger_auto_schema(responses=response_schema_dict)
     def get(self, request, *args, **kwargs):
         page = int(self.request.GET.get("page",1))
         limit = 5
@@ -17,6 +20,7 @@ class MovieListView(APIView):
         return Response(data=data, status=status.HTTP_200_OK)
 
 class MovieDetailView(APIView):
+    @swagger_auto_schema(responses=response_schema_dict)
     def get(self, request, *args, **kwargs):
         movie_id = self.kwargs.get("movie_id")
         
