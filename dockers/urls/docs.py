@@ -19,6 +19,13 @@ schema_view = get_schema_view(
    permission_classes=[permissions.AllowAny],
 )
 
+response_schema_dict = {
+    "200": openapi.Response(
+        description="데이터 조회에 성공했습니다."
+    )
+}
+
+
 urlpatterns = [
    re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
    re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
