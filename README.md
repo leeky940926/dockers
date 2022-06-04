@@ -55,10 +55,18 @@
 특정 영화에 대해 상세조회할 수 있습니다. 그래서 PathParameter로 movie_id를 받고 없는 영화번호를 입력 받을 시(대표적으로 DB내에서 삭제가 이루어진 뒤 요청을 보내는 경우에 해당) 영화가 존재하지 않는다고 사용자에게 메시지를 보여줍니다.
 
 
+<br>
+
+## 4. Unit Test 결과
+
+![image](https://user-images.githubusercontent.com/88086271/170815819-b51a0b6c-3a6d-4e10-8826-8d4669ee0c5b.png)
+
+Unit Test 코드는 [해당 디렉토리](https://github.com/leeky940926/dockers/tree/master/apps/movies/tests)에서 확인 가능합니다.
+
 
 <br>
 
-## 4. API Documentation
+## 5. API Documentation
 
 * swagger
 
@@ -66,7 +74,8 @@
 
 
 
-## 5. Commit Message GuideLines
+## 6. Commit Message GuideLines
+
 1. 분류는 Add / Refactor / Docs / Settings로 나뉜다.
 2. ADD : 신규로 기능 구현할 때 사용
 3. Refactor : 코드 리팩토링 (신규 외 수정/삭제 등에 대한 모든 기능에 사용)
