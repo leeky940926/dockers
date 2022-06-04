@@ -56,7 +56,6 @@ class TestMovieListView(APITestCase):
             title = "reply3",
             content = "그저그래여",
             rating = 5
-        ) 
         
     def tearDown(self) :
         Reply.objects.all().delete()
