@@ -398,3 +398,5 @@ zsdoc/data
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,pycharm,macos,linux,vim,zsh,python
 
 .env
+
+crawlings.py
