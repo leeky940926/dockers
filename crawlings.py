@@ -8,7 +8,7 @@ import requests
 
 from faker import Faker
 from django.db import transaction
-from movies.models import Movie, Reply
+from apps.movies.models import Movie, Reply
 
 f = Faker()
 
