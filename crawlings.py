@@ -27,7 +27,8 @@ with transaction.atomic():
                     title=response["title"], 
                     year=response["year"],
                     rating=response["rating"],
-                    runtime=response["runtime"]
+                    runtime=response["runtime"],
+                    background_image=response["background_image_original"]
                 )
                 
                 for _ in range(10):
