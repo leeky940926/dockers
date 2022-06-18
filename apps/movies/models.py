@@ -6,6 +6,7 @@ class Movie(TimeStampModel):
     year = models.PositiveIntegerField()
     rating = models.DecimalField(max_digits=5, decimal_places=2)
     runtime = models.PositiveIntegerField()
+    background_image = models.CharField(max_length=1000, null=True)
 
 class Reply(TimeStampModel):
     movie = models.ForeignKey("movies.Movie", on_delete=models.CASCADE)

@@ -8,7 +8,7 @@ import requests
 
 from faker import Faker
 from django.db import transaction
-from movies.models import Movie, Reply
+from apps.movies.models import Movie, Reply
 
 f = Faker()
 
@@ -27,7 +27,8 @@ with transaction.atomic():
                     title=response["title"], 
                     year=response["year"],
                     rating=response["rating"],
-                    runtime=response["runtime"]
+                    runtime=response["runtime"],
+                    background_image=response["background_image_original"]
                 )
                 
                 for _ in range(10):
