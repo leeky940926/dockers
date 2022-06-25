@@ -1,3 +1,4 @@
+import json
 from rest_framework.test import APITestCase, APIClient
 from movies.models import Movie, Reply
 
@@ -128,3 +129,33 @@ class TestMovieListView(APITestCase):
                 }
             ]
         )
+    
+    def test_movie_create(self):
+        url = "/api/movies/"
+        
+        request_body = {
+            "title" : "unit test movies",
+            "year" : 2022,
+            "rating" : 7.8,
+            "runtime" : 120,
+            "background_image" : "www.image.com"
+        }
+        
+        response = self.client.post(path=url, data=json.dumps(request_body), content_type="application/json")
+        self.assertEquals(response.status_code, 201)
+        self.assertEquals(response.json(),{"message":"생성되었습니다."})
+    
+    def test_movie_create_null_constraints(self):
+        url = "/api/movies/"
+        
+        request_body = {
+            "year" : 2022,
+            "rating" : 7.8,
+            "runtime" : 120,
+            "background_image" : "www.image.com"
+        }
+        
+        response = self.client.post(path=url, data=json.dumps(request_body), content_type="application/json")
+        self.assertEquals(response.status_code, 400)
+        self.assertEquals(response.json(), {"message":"전부 입력했는지 확인해주세요!"})
+        
