@@ -23,26 +23,12 @@ class MovieListView(APIView):
         data = [movie_set_serializer(movie=movie) for movie in movie_set]
         
         return Response(data=data, status=status.HTTP_200_OK)
-
-class MovieDetailView(APIView):
-    @swagger_auto_schema(responses=response_movie_detail_schema_dict)
-    def get(self, request, *args, **kwargs):
-        movie_id = self.kwargs.get("movie_id")
-        
-        movie = get_movie_object_by_movie_id(movie_id=movie_id)
-        
-        if not movie:
-            return Response(data={"message" : "영화ID를 확인해주세요"}, status=status.HTTP_404_NOT_FOUND)
-        
-        data = movie_set_serializer(movie=movie)
-        
-        return Response(data=data, status=status.HTTP_200_OK)
-
-'''
-Swagger에 추가 안 한 POST, UPDATE, DELETE는 Swagger 데코레이터 설정 안 했을 시,
-Swagger는 정말로 업데이트가 안 되는지 테스트
-'''
-class MovieCreateView(APIView):
+    
+    
+    '''
+    Swagger에 추가 안 한 POST, UPDATE, DELETE는 Swagger 데코레이터 설정 안 했을 시,
+    Swagger는 정말로 업데이트가 안 되는지 테스트
+    '''
     def post(self, request, *args, **kwargs):
         try:
             with transaction.atomic():
@@ -62,3 +48,18 @@ class MovieCreateView(APIView):
         else:
             return Response(data={"message":"생성되었습니다."}, status=201)
                 
+
+class MovieDetailView(APIView):
+    @swagger_auto_schema(responses=response_movie_detail_schema_dict)
+    def get(self, request, *args, **kwargs):
+        movie_id = self.kwargs.get("movie_id")
+        
+        movie = get_movie_object_by_movie_id(movie_id=movie_id)
+        
+        if not movie:
+            return Response(data={"message" : "영화ID를 확인해주세요"}, status=status.HTTP_404_NOT_FOUND)
+        
+        data = movie_set_serializer(movie=movie)
+        
+        return Response(data=data, status=status.HTTP_200_OK)
+
