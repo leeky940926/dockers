@@ -7,7 +7,6 @@ CELERY_TASK_SERIALIZER = "json"
 CELERY_ENABLE_UTC = True
 CELERY_TIMEZONE = "Asia/Seoul"
 CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
-
 CELERY_TASK_DEFAULT_QUEUE = "normal"
 CELERY_TASK_DEFAULT_EXCHANGE = "normal"
 CELERY_TASK_DEFAULT_ROUTING_KEY = "normal"
