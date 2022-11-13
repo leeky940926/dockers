@@ -380,6 +380,7 @@ tags
 # A popular plugin manager's files
 ._zinit
 .zinit_lstupd
+.zshrc
 
 # zdharma/zshelldoc tool's files
 zsdoc/data
