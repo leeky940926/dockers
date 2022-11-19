@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
-# Create your views here.
+class SigUpnView(APIView):
+    def perform_authentication(self, request):
+        if not self.request.user.is_authenticated:
+            return Response(status=status.HTTP_401_UNAUTHORIZED)
+    
+    def get(self, request, *args, **kwargs):
+        return Response(status=status.HTTP_200_OK)
+
