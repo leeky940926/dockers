@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['dockers.eba-92egdwu8.ap-northeast-2.elasticbeanstalk.com']
 
 
 ROOT_URLCONF = 'dockers.urls.root'
