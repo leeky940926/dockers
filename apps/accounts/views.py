@@ -8,5 +8,8 @@ class SigUpnView(APIView):
             return Response(status=status.HTTP_401_UNAUTHORIZED)
     
     def get(self, request, *args, **kwargs):
+
+        self.request.session["test"]="gigi"
+        print(self.request.session.get("test"))
         return Response(status=status.HTTP_200_OK)
 

@@ -30,6 +30,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['dockers.eba-92egdwu8.ap-northeast-2.elasticbeanstalk.com']
 
+SESSION_COOKIE_AGE = 100
 
 ROOT_URLCONF = 'dockers.urls.root'
 
