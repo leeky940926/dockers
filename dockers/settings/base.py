@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import sys
+import requests
+import firebase_admin
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -112,9 +114,10 @@ CORS_ORIGIN_WHITELIST = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-import os
-import requests
-# Other imports ...
+#Firebase
+default_app = firebase_admin.initialize_app()
+
+
 
 def is_ec2_linux():
     """
